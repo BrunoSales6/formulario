@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Formulário de inscrição</h1>
+    <p>Por favor, preencha nosso formulário.</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <fieldset>
+            <label for="Primeiro nome">Primeiro nome: <input required id="Primeiro nome" type="text"></label>
+            <label for="Segundo nome">Segundo nome: <input required id="Segundo nome" type="text"></label>
+            <label for="E-mail">E-mail: <input required id="E-mail" type="email"></label>
+            <label for="Nova senha">Nova senha: <input required minlength="8" id="Nova senha" type="password"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo de conta (Obrigatório)</legend>
+            <label for="Conta pessoal"><input class='inline' id="Conta pessoal" checked name="tipodeconta" type="radio"> Pessoal</label>
+            <label for="Conta empressarial"><input class='inline' id="Conta empressarial" name="tipodeconta" type="radio"> Empressarial</label>
+        </fieldset>
+        <fieldset>
+            <label for="foto de perfil"><input id="foto de perfil" type="file"> Foto de perfil</label>
+            <label for="qual a sua idade?">Qual a sua idade? <input id="qual a sua idade?" required min="18" max="120" type="number"></label>
+            <label for="Como você ficou sabendo da gente?"> Como você ficou sabendo da gente?
+                <select name="" id="Como você ficou sabendo da gente?">
+                    <option value="">(Selecione um)</option>
+                    <option value="1">Instagram</option>
+                    <option value="2">Facebook</option>
+                    <option value="3">Twitter</option>
+                    <option value="4">Outros</option>
+            </label>
+            </select>
+            <label for="biografia">Fale um pouco sobre você: <textarea name="biografia" id="biografia" cols="30" rows="10"></textarea></label>
+        </fieldset>
+        <label for="terms-and-conditions"><input class="inline" id="terms-and-conditions" required type="checkbox"> Eu aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a></label>
+        <input type='submit' value='Submit'>
+
+    </form>
+</body>
+</html>
